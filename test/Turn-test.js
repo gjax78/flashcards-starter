@@ -6,11 +6,13 @@ const Card = require('../src/Card.js');
 describe('Turn', function() {
 
   it('should be a function', function() {
+    const turn = new Turn();
     expect(Turn).to.be.a('function');
   });
 
   it('should instantiate a class', function() {
-    expect(Turn).to.be.an.instanceOf(Turn);
+    const turn = new Turn();
+    expect(turn).to.be.an.instanceOf(Turn);
   });
 
 
