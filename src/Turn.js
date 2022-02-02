@@ -21,7 +21,7 @@ class Turn {
   }
 
   feedback() {
-    if (this.guess === this.card.correctAnswer) {
+    if (this.card.correctAnswer === this.guess) {
       return 'correct!'
     } else {
       return 'incorrect!'
