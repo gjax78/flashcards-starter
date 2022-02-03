@@ -19,6 +19,7 @@ class Round {
       this.incorrectGuesses.push(this.returnCurrentCard().id)
     }
     this.turns++
+    return turn.feedback()
   }
 }
 
