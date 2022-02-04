@@ -21,13 +21,13 @@ class Round {
     return turn.feedback()
   }
 
-  calculatePercentageCorrect() {
+  calculatePercentCorrect() {
     const correctGuesses = ((this.turns - this.incorrectGuesses.length) / this.turns) * 100
     return correctGuesses
   }
 
   endRound() {
-    return `** Round over! ** You answered ${this.calculatePercentageCorrect()}% of the questions correctly!`
+    console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`)
   }
 }
 
