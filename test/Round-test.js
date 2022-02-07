@@ -93,9 +93,9 @@ describe('Round', function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck)
     round.takeTurn("Lex")
-    expect(round.calculatePercentageCorrect()).to.equal(0);
+    expect(round.calculatePercentCorrect()).to.equal(0);
     round.takeTurn("gallbladder")
-    expect(round.calculatePercentageCorrect()).to.equal(50);
+    expect(round.calculatePercentCorrect()).to.equal(50);
   });
 
   it('should end the round and print a string alerting the player', function() {
@@ -106,7 +106,7 @@ describe('Round', function() {
     const round = new Round(deck)
     round.takeTurn("pug")
     round.takeTurn("gallbladder")
-    expect(round.endRound()).to.equal(`** Round over! ** You answered ${round.calculatePercentageCorrect()}% of the questions correctly!`);
+    expect(round.endRound()).to.equal(console.log(`** Round over! ** You answered ${round.calculatePercentCorrect()}% of the questions correctly!`));
   });
 
 });
